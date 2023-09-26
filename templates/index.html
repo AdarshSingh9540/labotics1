@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
-{% load static %}
+  {% load static %}
 
 <head>
   <meta charset="UTF-8">
@@ -39,19 +39,22 @@
           </li>
           <li class="nav-item dropdown mx-1">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Basic Health Tools
+              Use our tools
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="{% url "bmi" %}">BMI</a></li>
-              <li><a class="dropdown-item disabled" href="#">Calorie Tracker</a></li>
+              <li><a class="dropdown-item" href="{% url "bmi" %}">BMI calculator</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">More tools coming soon!!</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
             </ul>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link disabled " aria-disabled="true">Register as lab</a>
+            <a class="nav-link disabled" aria-disabled="true">Register as lab</a>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link disabled " aria-disabled="true">Interpret Your results</a>
           </li>
         </ul>
         <div class="login mx-5">
@@ -84,9 +87,15 @@
   </div>
   <div class="centrekr">
     <button type="button" class="btn btn-primary btn-lg bg-gradient mx-2 rounded-2 mb-3"><a href="{% url "search" %}"
-      style="text-decoration: none; color: #fff;">Get Started</a></button>
+      style="text-decoration: none; color: #fff;">Get Started  <i class="fa-regular fa-share-from-square" style="margin: 0 10px 0 10px;"></i></a></button>
   </div>
-
+  <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+  <df-messenger
+    intent="WELCOME"
+    chat-title="Labotics_Support"
+    agent-id="7dc3e246-cde4-42dd-ba87-993f16baf581"
+    language-code="en"
+  ></df-messenger>
   <div class="centrekr">
     <h2 class="mb-4 head"> Features </h2>
     <div class="after mb-5"></div>
@@ -150,9 +159,36 @@
 
   </div>
  </div>
+
+  </div>
+ </div><div class="container " >
+  <div class=" d-flex flex-row justify-content-between rounded-5 mb-5" style="box-shadow: 0 0 100px rgba(0, 0, 25, 0.5);
+  padding-left: 100px; padding-right: 100px;
+   "> 
+    
+
+    <img class="heroimage2 left pure-img" src="{% static 'images/search.png' %}" style="margin-bottom: 25px;" alt="">
+
+    <div class=" herotext2 right" style="width: 35vw; margin-bottom: 25px;">
+      <div class="">
+        <h1 class="herohead " style="font-size: 3rem; font-weight: 500;">Body Mass Index (BMI) Check</h1>
+      </div>
+
+      <div class=" ">
+        <h1 class="fs-5">Enhance user health tracking by including a BMI (Body Mass Index) calculator, allowing users to input their weight and height for instant BMI calculation and personalized health insights.</h1>
+      </div>
+      <a class="btn btn-primary" href="{% url "bmi" %}" role="button" style="margin-left: 45%; padding: 10px; font-size: 22px; margin-top: 15px; margin-bottom: 40px;">Check BMI <i class="fa-regular fa-share-from-square" style="margin: 0 10px 0 10px;"></i></a>
+
+
+    </div>
+
+  </div>
+ </div>
+
    
 
- <section style="color: #000; background-color: #f3f2f2;">
+ <section style="background-color: rgb(33,37,41);
+ box-shadow: 0 0 10px rgba(0, 0, 25, 0.2);">
   <div class="container py-5">
     <div class="row d-flex justify-content-center">
       <div class="col-md-10 col-xl-8 text-center">
@@ -166,7 +202,7 @@
 
     <div class="row text-center">
       <div class="col-md-4 mb-4 mb-md-0">
-        <div class="card">
+        <div class="card" style="box-shadow: 0 0 40px rgba(0, 0, 25, 0.5);">
           <div class="card-body py-4 mt-2">
             <div class="d-flex justify-content-center mb-4">
               <img src="{% static 'images/test2.jpeg' %}"
@@ -200,7 +236,7 @@
  
 
       <div class="col-md-4 mb-0">
-        <div class="card">
+        <div class="card" style="box-shadow: 0 0 40px rgba(0, 0, 25, 0.5);">
           <div class="card-body py-4 mt-2">
             <div class="d-flex justify-content-center mb-4">
               <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(17).webp"
@@ -233,7 +269,7 @@
       </div>
 
       <div class="col-md-4 mb-4 mb-md-0">
-        <div class="card">
+        <div class="card" style="box-shadow: 0 0 40px rgba(0, 0, 25, 0.5);">
           <div class="card-body py-4 mt-2">
             <div class="d-flex justify-content-center mb-4">
               <img src="{% static 'images/test1.jpeg' %}"
@@ -291,7 +327,7 @@
                         <li><a href="/">Home</a></li>
                         <li><a href="{% url "signup" %}">Register</a></li>
                         <li><a href="{% url "about" %}">About</a></li>
-                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="{% url "labotics" %}">Contact Us</a></li>
                     </ul>
                 </div>
             </div>

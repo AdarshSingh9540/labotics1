@@ -10,12 +10,13 @@
     integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="{% static 'about.css' %}">
+  <link rel="stylesheet" href="{% static 'bmi.css' %}">
   <link rel="stylesheet" href="{% static 'style.css' %}">
   <link rel="stylesheet" href="{% static 'css/uikit.min.css' %}" >
   <link rel="stylesheet" href="{% static 'search.css' %}">
-  <link rel="stylesheet" href="{% static 'bmi.css' %}">
+  
 
-  <title>Search</title>
+  <title>BMI </title>
 </head>
 
 <body>
@@ -23,7 +24,12 @@
   <nav class="navbar navbar-expand-lg  fs-5 bgp sticky-top">
 
     <div class="container-fluid">
-      <a class="navbar-brand fs-5 mx-5 " href="#">Labotics</a>
+      <a class="navbar-brand fs-5 mx-5 " href="#">
+        <span style="color: #019cbe;">LA</span>
+      <span style="color: #198754;">BO</span>
+      <span style="color: red;">TI</span>
+      <span style="color: yellow;">CS</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -38,19 +44,19 @@
           </li>
           <li class="nav-item dropdown mx-1">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Blogs
+              Use our tools
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="{% url "index" %}">Go back</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
             </ul>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link disabled " aria-disabled="true">Register as lab</a>
+            <a class="nav-link disabled " aria-disabled="true">Interpret your results</a>
           </li>
         </ul>
         <div class="login mx-5">
@@ -73,7 +79,7 @@
         flex-direction: column;">
     
         <div class="check">
-            <h1 style="font-weight: 800;">BMI Calculator</h1>
+            <h1 style="font-weight: 800; color: #fff;">BMI Calculator</h1>
             <label for="weight" style="font-size: 1.5rem; font-weight: 500; margin: 15px;" >Weight (kg): </label>
             <input id="weight" class="uk-search-input rounded-5 p-4" style=" box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);" type="search" placeholder="Enter your weight in kilograms"
               aria-label="Search">
@@ -81,9 +87,9 @@
             <label for="height" style="font-size: 1.5rem; font-weight: 500;margin: 15px;">Height (cm): </label>
             <input id="height" class="uk-search-input rounded-5 p-4" style=" box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);" type="search" placeholder="Enter your height in centimeters"
               aria-label="Search">
-            <button onclick="calculateBMI()" style="border: 0; outline: 0; background: red; color: #fff; padding: 10px; border-radius: 10px;font-weight: 600;margin-left: 170px; margin-top: 30px; width: 180px; font-size: 20px;">Calculate BMI</button><br><br>
+            <button onclick="calculateBMI()" style="border: 0; outline: 0; background-color: #198754; color: #fff; padding: 10px; border-radius: 10px;font-weight: 600;margin-left: 170px; margin-top: 30px; width: 180px; font-size: 20px;">Calculate BMI</button><br><br>
             
-            <div id="result" style=" font-size: 20px;font-weight: bold;color: #333; margin-top: 20px;"></div>
+            <div id="result" style=" font-size: 20px;font-weight: bold;color:#fff; margin-top: 20px;"></div>
         </div>
         
 
@@ -91,8 +97,9 @@
     </div>
   </div>
 
-  <div class="footer" style="margin-top: 50px;">
-    <div class="container">
+  <div class="footer" style="margin-top: 50px;
+  ">
+    <div class="container" >
         <div class="row">
             <div class="col-md-4 col-xs-12">
                 <div class="first">
@@ -134,7 +141,7 @@
             </div>
         </div>
     </div>
-    <div class="container">`
+    <div class="container">
         <div class="row">
             <div class="col-12">
                 <div class="line"></div>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .chatbot-toggler{
+        position: fixed;
+        right: 40px;
+        bottom: 35px;
+        height: 50px;
+        width: 50px;
+        background: rgb(108, 108, 211);
+        color: aliceblue;
+        border-radius: 50%;
+        outline: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 0;
+        cursor: pointer;
+    }
+
+    .chatbot-toggler span{
+        position: absolute;
+    }
+
+    .show-chatbot .chatbot-toggler span:first-child,
+    .chatbot-toggler span:last-child
+    {
+        opacity: 0;
+    }
+
+    .show-chatbot .chatbot-toggler span:last-child{
+        opacity: 1;
+    }
+    .container{
+        position: fixed;
+        right: 40px;
+        bottom: 100px;
+        width: 420px;
+        overflow: hidden;
+        background: #fff;
+        border-radius: 15px;
+        transform: scale(0.5);
+        opacity: 0;
+        border-radius: 15px;
+        pointer-events: none;
+
+
+    }
+
+    .show-chatbot .container{
+        transform: scale(1);
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+
+</style>
+<body>
+    
+
+    <!-- <button class="chatbot-toggler">
+        <span>
+            <i class="fa-regular fa-message"></i>
+        </span>
+    
+        <span><i class="fa-solid fa-xmark"></i></span>
+          </button> -->
+
+          <button class="chatbot-toggler">
+             <span><i class="fa-regular fa-message"></i></span>
+           <span> <i class="fa-solid fa-xmark"></i></span>
+          </button>
+          <div class="container">
+       <div class="chatbot" >
+        <iframe width="400" height="520"  allow="microphone;" src="https://console.dialogflow.com/api-client/demo/embedded/7dc3e246-cde4-42dd-ba87-993f16baf581"></iframe>
+       </div>
+   
+
+   <script src="https://kit.fontawesome.com/02dcb82b73.js" crossorigin="anonymous"></script>
+</body>
+</html>

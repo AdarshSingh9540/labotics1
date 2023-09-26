@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="en" >
-  {% load static %}
+{% load static %}
+<html lang="en" data-bs-theme="dark">
 
 <head>
   <meta charset="UTF-8">
@@ -18,7 +18,12 @@
   <nav class="navbar navbar-expand-lg  fs-5 bgp sticky-top">
  
     <div class="container-fluid">
-      <a class="navbar-brand fs-5 mx-5 " href="/">Labotics</a>
+      <a class="navbar-brand fs-5 mx-5 " href="#">
+        <span style="color: #019cbe">LA</span>
+          <span style="color: #198754">BO</span>
+          <span style="color: red">TI</span>
+          <span style="color: yellow">CS</span>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -33,25 +38,25 @@
           </li>
           <li class="nav-item dropdown mx-1">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Blogs
+              Use our tools
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li><a class="dropdown-item" href="{% url "bmi" %}">BMI calculator</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Another action</a></li> -->
               <li>
                 <hr class="dropdown-divider">
               </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <!-- <li><a class="dropdown-item" href="#">Something else here</a></li> -->
             </ul>
           </li>
           <li class="nav-item mx-2">
-            <a class="nav-link disabled " aria-disabled="true">Register as lab</a>
+            <a class="nav-link disabled " aria-disabled="true">Interpret your results</a>
           </li>
         </ul>
         <div class="login mx-5">
          
           <!-- <button type="button" class="btn btn-primary btn-m bg-gradient mx-2 rounded-2 "><a href="login.html" style="text-decoration: none;" >Login</a></button> -->
-          <button type="button" class="btn btn-success btn-m bg-gradient mx-2  rounded-2 logoutbtn"><a href="{% url "index" %}" style="text-decoration: none;">Sign Out</a></button>
+          <button type="button" class="btn btn-success btn-m bg-gradient mx-2  rounded-2 logoutbtn"><a href="{% url "index" %}" style="text-decoration: none; color: #fff;">Sign Out</a></button>
         </div>
       </div>
     </div>
@@ -138,64 +143,187 @@
 
   </div>
  </div>
+   
 
-  
+ <section style="background-color: rgb(33,37,41);
+ box-shadow: 0 0 10px rgba(0, 0, 25, 0.2);">
+  <div class="container py-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-10 col-xl-8 text-center">
+        <h3 class="fw-bold mb-4">Testimonials</h3>
+        <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+          <i class="fas fa-quote-left pe-2"></i>Labotics Lab has truly set a gold standard in healthcare. Their state-of-the-art facility, highly skilled and friendly staff, and unwavering commitment to precision have transformed the way I approach my health. "Labotics Lab has truly set a gold standard in healthcare.<i class="fas fa-quote-right pe-2"></i>
 
-  
-  
-  
-  <div class="centrekr">
-    <h2 class="my-4 head"> Contact Us </h2>
-    <div class="after">
+        </p>
+      </div>
     </div>
-    <h4 class="my-3">...Feel free to contact Us...</h4>
+
+    <div class="row text-center">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card" style="box-shadow: 0 0 40px rgba(0, 0, 25, 0.5);">
+          <div class="card-body py-4 mt-2">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="{% static 'images/test2.jpeg' %}"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h5 class="font-weight-bold">Prajjwal Sharma</h5>
+            <h6 class="font-weight-bold my-3">Web Developer in Dyte</h6>
+            <ul class="list-unstyled d-flex justify-content-center">
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star-half-alt fa-sm text-info"></i>
+              </li>
+            </ul>
+            <p class="mb-2">
+              <i class="fas fa-quote-left pe-2"></i>Labotics is a healthcare gem. Their modern facility, efficient and friendly staff, and precise diagnostics have been a game-changer for me. With flexible scheduling, transparent pricing, and a strong commitment to community health and safety, Labotics truly stands out as a trusted partner in healthcare.
+            </p>
+          </div>
+        </div>
+      </div>
+ 
+
+      <div class="col-md-4 mb-0">
+        <div class="card" style="box-shadow: 0 0 40px rgba(0, 0, 25, 0.5);">
+          <div class="card-body py-4 mt-2">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(17).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h5 class="font-weight-bold">Priyanka Khanna</h5>
+            <h6 class="font-weight-bold my-3">Front-end Developer in TCS</h6>
+            <ul class="list-unstyled d-flex justify-content-center">
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="far fa-star fa-sm text-info"></i>
+              </li>
+            </ul>
+            <p class="mb-2">
+              <i class="fas fa-quote-left pe-2"></i>Labotics delivers top-notch diagnostics with cutting-edge technology, friendly and skilled staff, ensuring utmost accuracy and patient privacy. Their flexible scheduling, transparent pricing, and follow-up support, along with a commitment to community health and safety, make them the go-to choice for comprehensive, accessible, and trustworthy healthcare.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card" style="box-shadow: 0 0 40px rgba(0, 0, 25, 0.5);">
+          <div class="card-body py-4 mt-2">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="{% static 'images/test1.jpeg' %}"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h5 class="font-weight-bold">Rajdeep Kapoor</h5>
+            <h6 class="font-weight-bold my-3">Accountant in Accenture</h6>
+            <ul class="list-unstyled d-flex justify-content-center">
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+            </ul>
+            <p class="mb-2">
+              <i class="fas fa-quote-left pe-2"></i>Labotics is a game-changer. Their comprehensive tests, expert team, and lightning-fast results make healthcare seamless and efficient. Trustworthy, innovative, and patient-focused, Labotics is my go-to for all diagnostic needs.Labotics truly stands out as a trusted partner in healthcare.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
   </div>
-  <footer>
-    <div class="footer-1">
-      <div class="content">
-        <!-- <div class="left box gap">
-                <div class="upper">
-                    <div class="topic">About us</div>
-                    <p>Labotics is not just a website; it's a healthcare empowerment tool. By offering a one-stop solution for locating diagnostic labs, comparing prices, and making informed choices, Labotics is poised to transform the way individuals approach their healthcare needs. In an increasingly complex healthcare landscape, Labotics stands as a beacon of simplicity, transparency, and affordability, making it an invaluable resource for anyone seeking quality diagnostic services.</p>
+</section>
+
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <div class="first">
+                    <h4>Labotics</h4>
+                    <p> Advanced Technology</p>
+                    <p>Comprehensive Test Menu</p>
+                    <p>Rapid Turnaround</p>
+                    <p>Quality Assurance</p>
+                    <p>Healthcare Partnerships:</p>
+                    <p> Convenience and affordability</p>
                 </div>
-            </div> -->
-        <div class="middle box gap">
-          <div class="topic">Location </div>
-
-          <div><i class="fa fa-smile-o" , style="color:#e0b02c"></i>
-            <i class="fa fa-smile-o" , style="color:#e0b02c"></i>
-            <i class="fa fa-smile-o" , style="color:#e0b02c"></i>
-          </div>
+            </div>
+  
+            <div class="col-md-4 col-xs-12">
+                <div class="second">
+                    <h4> Navigate</h4>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="{% url "signup" %}">Register</a></li>
+                        <li><a href="{% url "about" %}">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+  
+            <div class="col-md-4 col-xs-12">
+                <div class="third">
+                    <h4> Contact</h4>
+                    <ul>
+                        <li>Labotics</li> 
+                       
+                      <li><i class="far fa-envelope"></i> Labotics@gmail.com</li>
+                        <li><i class="far fa-envelope"></i> Labotics@yahoo.com</li>
+  
+  
+                      <li><i class="fas fa-map-marker-alt"></i> New Delhi, Bharat(IN) </li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="right box gap">
-          <div class="topic">Feedback</div>
-          <form action="#" name="feedbackform" onsubmit="return feedbackvalidate()">
-            <input type="text" placeholder="Enter your valuable feedback" name="feedback">
-            <button type="submit" class="btn bg-primary">Send</button>
-          </form>
-        </div>
-      </div>
-      <div class="lower">
-        <div class="social-container">
-          <div class="social-icons">
-            <a class="Twitter gap" href="/" target="_blank" title="Twitter" rel="noopener noreferrer"
-              aria-label="Follow us on Twitter"><i class="fa-brands fa-square-twitter"></i></a>
-            <a class="Instagram gap" href="/" target="_blank" title="Instagram" rel="noopener noreferrer"
-              aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
-            <a class="linkedin gap" href="/" target="_blank" title="LinkedIn" rel="noopener noreferrer"
-              aria-label="Follow us on LinkedIn"><i class="fa fa-phone-volume"></i></a>
-
-            <a class="Blog gap" href="#" target="_blank" title="Blog" rel="noopener noreferrer"
-              aria-label="Follow us on Blog"><i class="fa fa-rss-square"></i></a>
-          </div>
-        </div>
-        <div class="bottom centrekr" style="color: #fff; font-size:large;">
-          <p>Copyright © <span id="footer-year"></span> <a href="/">@ Labotics
-            </a> All rights reserved</p>
-        </div>
-      </div>
     </div>
-  </footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="line"></div>
+                <div class="second2">
+                    <a href="https://codepen.io/AndreeaBunget" target="_blank"> <i class="fa-brands fa-facebook fa-2x margin"></i></a>
+                    <a href="https://www.instagram.com/adarshsingh9540/" target="_blank"> <i class="fa-brands fa-instagram fa-2x margin"></i></a>
+                    <a href="https://www.linkedin.com/in/adarsh-singh-183357262/" target="_blank"> <i class="fab fa-linkedin fa-2x margin"></i></a>
+                    <a href="https://www.youtube.com/channel/UCTefFWBZmEPByurl-Y9JM5A" target="_blank"><i class="fab fa-youtube fa-2x margin" ></i></a>
+  
+                </div>
+  
+            </div>
+            <h5 style="text-align: center; color: #fff;">@Labotics  <i class="fa-solid fa-heart-pulse" style="color: red; margin-left: 10px;"></i></h5>
+        </div>
+        </div>
+  </div>
+  
   <!-- <script src="login.js" type="module"></script> -->
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
   <script src="{% static 'logic.js' %}"></script>
