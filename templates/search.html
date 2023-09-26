@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="{% static 'about.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="stylesheet" href="{% static 'css/uikit.min.css' %}">
+
+  <title>Search</title>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg  fs-5 bgp sticky-top">
+
+    <div class="container-fluid">
+      <a class="navbar-brand fs-5 mx-5 " href="/">Labotics</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-3">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="{% url "index" %}">Home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="{% url "about" %}">About</a>
+          </li>
+          <li class="nav-item dropdown mx-1">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Basic Health Tools
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url "bmi" %}">BMI</a></li>
+              <li><a class="dropdown-item disabled" href="#">Calorie Tracker</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item disabled" href="#">Nore Tools Coming soon!!</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link disabled " aria-disabled="true">Interpret your results</a>
+          </li>
+        </ul>
+        <div class="login mx-5">
+
+          <button type="button" class="btn btn-primary btn-m bg-gradient mx-2 rounded-2 "><a href="{% url "login" %}"
+              style="text-decoration: none; color: white;">Login</a></button>
+          <button type="button" class="btn btn-success btn-m bg-gradient mx-2  rounded-2 linkout "><a href="{% url "signup" %}"
+              style="text-decoration: none; color: white;">Sign Up</a></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="d-flex flex-row justify-content-between " style="padding-left: 15vw;
+  padding-right: 15vw; margin-top: 80px;">
+    <img class=" pure-img" style="width: 30vw; " src="{% static 'images/search.png' %}" alt="">
+    <div class="centrekr " style="width: 30vw;">
+      <div class="form " style="display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;">
+        <div class="box1"></div>
+        <div class="uk-margin">
+          <form class="uk-search uk-search-default" id="citySearchForm" style="width: 30vw;">
+              <span class="uk-search-icon-flip" uk-search-icon></span>
+              <input class="uk-search-input rounded-5 p-4" style="box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);" type="search" placeholder="Enter your city" aria-label="Search">
+          </form>
+      </div>
+      
+      <div class="box1"></div>
+      
+      <div class="uk-margin">
+          <form class="uk-search uk-search-default" id="testsSearchForm" style="width: 30vw;">
+              <span class="uk-search-icon-flip px-2" uk-search-icon></span>
+              <input class="uk-search-input rounded-5 p-4" style="box-shadow: 0 0 30px rgba(0, 0, 0, 0.8);" type="search" placeholder="Select tests to find labs" aria-label="Search">
+          </form>
+      </div>
+      
+      <div class="searchbt">
+          <button class="uk-button uk-button-primary rounded-5" type="submit" id="findLabsButton">Find Labs</button>
+      </div>
+      
+      <div class="box1"></div>
+      
+      <script>
+          document.getElementById("findLabsButton").addEventListener("click", function () {
+              const cityInput = document.querySelector("#citySearchForm input").value;
+              const testsInput = document.querySelector("#testsSearchForm input").value;
+      
+              // Construct the URL with the data as query parameters
+              const url = `/labotics/?city=${encodeURIComponent(cityInput)}&tests=${encodeURIComponent(testsInput)}`;
+              window.location.href = url;
+          });
+      </script>
+      
+
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa"
+    crossorigin="anonymous"></script>
+  <script src="{% static 'js/uikit.min.js' %}"></script>
+  <script src="{% static 'js/uikit-icons.min.js' %}"></script>
+</body>
+
+</html>

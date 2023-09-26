@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "bootstrap-5.3.1-dist",
+			"path": "."
+		},
+		{
+			"name": "bsdemo",
+			"path": "../../../Desktop/bsdemo"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "bootstrap-5.3.1-dist"
+	}
+}

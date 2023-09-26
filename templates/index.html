@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+{% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@3.0.0/build/pure-min.css" integrity="sha384-X38yfunGUhNzHpBaEBsWLO+A0HDYOQi8ufWDkZ0k9e0eXz/tH3II7uKZ9msv++Ls" crossorigin="anonymous">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Krub:wght@500&display=swap" rel="stylesheet">
+  <title>Labotics</title>
+ 
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg  fs-5 bgp sticky-top">
+
+    <div class="container-fluid">
+      <a class="navbar-brand fs-5 mx-5 " href="#">
+        <span style="color: #019cbe;">LA</span>
+      <span style="color: #198754;">BO</span>
+      <span style="color: red;">TI</span>
+      <span style="color: yellow;">CS</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-3">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="{% url "about" %}">About</a>
+          </li>
+          <li class="nav-item dropdown mx-1">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Basic Health Tools
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="{% url "bmi" %}">BMI</a></li>
+              <li><a class="dropdown-item disabled" href="#">Calorie Tracker</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">More tools coming soon!!</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link disabled " aria-disabled="true">Register as lab</a>
+          </li>
+        </ul>
+        <div class="login mx-5">
+
+          <button type="button" class="btn btn-primary btn-m bg-gradient mx-2 rounded-2 "><a href="{% url "login" %}"
+              style="text-decoration: none; color: #fff;">Login</a></button>
+          <button type="button" class="btn btn-success btn-m bg-gradient mx-2  rounded-2 linkout "><a href="{% url "signup" %}"
+              style="text-decoration: none; color: #fff;">Sign Up</a></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="tu d-flex flex-row justify-content-between " style="padding-left: 15vw;
+  padding-right: 15vw;">
+    <div class=" herotext" style="width: 30vw;">
+      <div class="fs-1 ">
+        <p class="herohead" >The <span style="color: #198754;">Easiest</span> way to Find Labs</p>
+      </div>
+
+      <div class="typewriter1 ">
+        <span class="fs-4">where you can</span>
+        <span class="fs-4" id="typewriter" data-array=""> </span>
+        <span class="cursor"></span>
+        
+      </div>
+    </div>
+
+    <img class="heroimage pure-img" src="{% static 'images/download.png' %}" alt="">
+
+  </div>
+  <div class="centrekr">
+    <button type="button" class="btn btn-primary btn-lg bg-gradient mx-2 rounded-2 mb-3"><a href="{% url "search" %}"
+      style="text-decoration: none; color: #fff;">Get Started</a></button>
+  </div>
+
+  <div class="centrekr">
+    <h2 class="mb-4 head"> Features </h2>
+    <div class="after mb-5"></div>
+  </div>
+ <div class="container " >
+  <div class=" d-flex flex-row justify-content-between rounded-5 mb-5" style="box-shadow: 0 0 100px rgba(0, 0, 25, 0.5);
+  padding-left: 100px; padding-right: 100px;">
+    <div class=" herotext left" style="width: 30vw;">
+      <div class="">
+        <h1 class="herohead " style="font-size: 3rem;">Advanced search and filtering</h1>
+      </div>
+
+      <div class=" ">
+        <h1 class="fs-5">Effortlessly find labs that meet your specific needs using our powerful search and
+          filtering options. Search by location, test type, price range, and more.</h1>
+      </div>
+    </div>
+
+    <img class="heroimage right pure-img" src="{% static 'images/download1.png' %}" alt="">
+
+  </div>
+ </div>
+
+ <div class="container " >
+  <div class=" d-flex flex-row justify-content-between rounded-5 mb-5" style="box-shadow: 0 0 100px rgba(0, 0, 25, 0.5);
+  padding-left: 100px; padding-right: 100px;
+   "> 
+    
+
+    <img class="heroimage2 left pure-img" src="{% static 'images/data.png' %}" alt="">
+
+    <div class=" herotext2 right" style="width: 30vw;">
+      <div class="">
+        <h1 class="herohead " style="font-size: 3rem;">Comprehensive Lab Database</h1>
+      </div>
+
+      <div class=" ">
+        <h1 class="fs-5">Explore an extensive database of labs, each with detailed information about their
+          services, locations, and pricing.</h1>
+      </div>
+    </div>
+
+  </div>
+ </div>
+
+ <div class="container " >
+  <div class=" d-flex flex-row justify-content-between rounded-5 mb-5" style="box-shadow: 0 0 100px rgba(0, 0, 25, 0.5);
+  padding-left: 100px; padding-right: 100px; padding-bottom: 80px;">
+    <div class=" herotext left" style="width: 30vw;">
+      <div class="">
+        <h1 class="herohead " style="font-size: 3rem;">User Reviews and Ratings</h1>
+      </div>
+
+      <div class=" ">
+        <h1 class="fs-5">User reviews and ratings to gain insights into the quality and reputation of labs in
+          your area. Share your own experiences to help others make informed choices.</h1>
+      </div>
+    </div>
+
+    <img class="heroimage right" src="{% static 'images/review.png' %}" alt="">
+
+  </div>
+ </div>
+   
+
+ <section style="color: #000; background-color: #f3f2f2;">
+  <div class="container py-5">
+    <div class="row d-flex justify-content-center">
+      <div class="col-md-10 col-xl-8 text-center">
+        <h3 class="fw-bold mb-4">Testimonials</h3>
+        <p class="mb-4 pb-2 mb-md-5 pb-md-0">
+          <i class="fas fa-quote-left pe-2"></i>Labotics Lab has truly set a gold standard in healthcare. Their state-of-the-art facility, highly skilled and friendly staff, and unwavering commitment to precision have transformed the way I approach my health. "Labotics Lab has truly set a gold standard in healthcare.<i class="fas fa-quote-right pe-2"></i>
+
+        </p>
+      </div>
+    </div>
+
+    <div class="row text-center">
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card">
+          <div class="card-body py-4 mt-2">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="{% static 'images/test2.jpeg' %}"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h5 class="font-weight-bold">Prajjwal Sharma</h5>
+            <h6 class="font-weight-bold my-3">Web Developer in Dyte</h6>
+            <ul class="list-unstyled d-flex justify-content-center">
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star-half-alt fa-sm text-info"></i>
+              </li>
+            </ul>
+            <p class="mb-2">
+              <i class="fas fa-quote-left pe-2"></i>Labotics is a healthcare gem. Their modern facility, efficient and friendly staff, and precise diagnostics have been a game-changer for me. With flexible scheduling, transparent pricing, and a strong commitment to community health and safety, Labotics truly stands out as a trusted partner in healthcare.
+            </p>
+          </div>
+        </div>
+      </div>
+ 
+
+      <div class="col-md-4 mb-0">
+        <div class="card">
+          <div class="card-body py-4 mt-2">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(17).webp"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h5 class="font-weight-bold">Priyanka Khanna</h5>
+            <h6 class="font-weight-bold my-3">Front-end Developer in TCS</h6>
+            <ul class="list-unstyled d-flex justify-content-center">
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="far fa-star fa-sm text-info"></i>
+              </li>
+            </ul>
+            <p class="mb-2">
+              <i class="fas fa-quote-left pe-2"></i>Labotics delivers top-notch diagnostics with cutting-edge technology, friendly and skilled staff, ensuring utmost accuracy and patient privacy. Their flexible scheduling, transparent pricing, and follow-up support, along with a commitment to community health and safety, make them the go-to choice for comprehensive, accessible, and trustworthy healthcare.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4 mb-4 mb-md-0">
+        <div class="card">
+          <div class="card-body py-4 mt-2">
+            <div class="d-flex justify-content-center mb-4">
+              <img src="{% static 'images/test1.jpeg' %}"
+                class="rounded-circle shadow-1-strong" width="100" height="100" />
+            </div>
+            <h5 class="font-weight-bold">Rajdeep Kapoor</h5>
+            <h6 class="font-weight-bold my-3">Accountant in Accenture</h6>
+            <ul class="list-unstyled d-flex justify-content-center">
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+              <li>
+                <i class="fas fa-star fa-sm text-info"></i>
+              </li>
+            </ul>
+            <p class="mb-2">
+              <i class="fas fa-quote-left pe-2"></i>Labotics is a game-changer. Their comprehensive tests, expert team, and lightning-fast results make healthcare seamless and efficient. Trustworthy, innovative, and patient-focused, Labotics is my go-to for all diagnostic needs.Labotics truly stands out as a trusted partner in healthcare.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+  <div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-xs-12">
+                <div class="first">
+                    <h4>Labotics</h4>
+                    <p> Advanced Technology</p>
+                    <p>Comprehensive Test Menu</p>
+                    <p>Rapid Turnaround</p>
+                    <p>Quality Assurance</p>
+                    <p>Healthcare Partnerships:</p>
+                    <p> Convenience and affordability</p>
+                </div>
+            </div>
+  
+            <div class="col-md-4 col-xs-12">
+                <div class="second">
+                    <h4> Navigate</h4>
+                    <ul>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="{% url "signup" %}">Register</a></li>
+                        <li><a href="{% url "about" %}">About</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+  
+            <div class="col-md-4 col-xs-12">
+                <div class="third">
+                    <h4> Contact</h4>
+                    <ul>
+                        <li>Labotics</li> 
+                       
+                      <li><i class="far fa-envelope"></i> Labotics@gmail.com</li>
+                        <li><i class="far fa-envelope"></i> Labotics@yahoo.com</li>
+  
+  
+                      <li><i class="fas fa-map-marker-alt"></i> New Delhi, Bharat(IN) </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="line"></div>
+                <div class="second2">
+                    <a href="#" target="_blank"> <i class="fa-brands fa-facebook fa-2x margin"></i></a>
+                    <a href="https://www.instagram.com/adarshsingh9540/" target="_blank"> <i class="fa-brands fa-instagram fa-2x margin"></i></a>
+                    <a href="https://www.linkedin.com/in/adarsh-singh-183357262/" target="_blank"> <i class="fab fa-linkedin fa-2x margin"></i></a>
+                    <a href="https://www.youtube.com/channel/UCTefFWBZmEPByurl-Y9JM5A" target="_blank"><i class="fab fa-youtube fa-2x margin" ></i></a>
+  
+                </div>
+  
+            </div>
+            <h5 style="text-align: center; color: #fff;">@Labotics  <i class="fa-solid fa-heart-pulse" style="color: red; margin-left: 10px;"></i></h5>
+        </div>
+        </div>
+  </div>
+  
+               
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+   import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-app.js';
+   import { getAuth } from 'https://www.gstatic.com/firebasejs/10.3.1/firebase-auth.js';
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyCDJPkMheOnWSJnMIozfsQcdA2Scsd5P8Q",
+      authDomain: "labquest-3aea4.firebaseapp.com",
+      projectId: "labquest-3aea4",
+      storageBucket: "labquest-3aea4.appspot.com",
+      messagingSenderId: "637763619838",
+      appId: "1:637763619838:web:5f1674f6cb716765f0ceaf"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+  </script> 
+  <!-- <script src="login.js" type="module"></script> -->
+  <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  
+  <script src="{% static 'logic.js' %}"></script>
+  <script src="{% static 'aftersignup.js' %}" defer type="module"></script>
+
+  <script src="https://kit.fontawesome.com/02dcb82b73.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  {% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="{% static 'about.css' %}">
+</head>
+<body>
+    <div class="about-sec">
+      <nav class="navbar navbar-expand-lg  fs-5 bgp sticky-top">
+
+        <div class="container-fluid">
+          <a class="navbar-brand fs-5 mx-5 " href="/">Labotics</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-3">
+              <li class="nav-item mx-2">
+                <a class="nav-link active" aria-current="page" href="{% url "index" %}">Home</a>
+              </li>
+              <li class="nav-item mx-1">
+                <a class="nav-link" href="{% url "about" %}">About</a>
+              </li>
+              <li class="nav-item dropdown mx-1">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Basic Health tools
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="{% url "bmi" %}">BMI</a></li>
+                  <li><a class="dropdown-item disabled " href="#">Calorie Tracker</a></li>
+                  <li>
+                    <hr class="dropdown-divider">
+                  </li>
+                  <li><a class="dropdown-item" href="#">More tools in future!!</a></li>
+                </ul>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link disabled " aria-disabled="true">Interpret Your Result</a>
+              </li>
+            </ul>
+            <div class="login mx-5">
+    
+              
+          </div>
+        </div>
+      </nav>
+
+        <header>
+           <div class="head-section">
+            <div id="left-head">
+                <h1> Welcome  to India's premier digital Health  and Wellness Hub!</h1>
+                <h5>Our mission is to streamline healthcare, transform lives, and empower individuals through convenient and accessible lab  testing services, making health management easier than ever before.</h5>
+            </div>
+            <div class="right-head">
+                <img src="{% static 'images/about image.jpg' %}" alt="">
+            </div>
+           </div>
+        </header>
+
+        <div class="About-us-detail" style="padding: 10px 20px 10px 20px; margin-top: 40px;">
+          <h2> <u>Key Features About US :</u></h2>
+          <ul style="font-size: 18px;  margin-top: 20px;">
+            <li>
+              Easy Lab Search: Labotics offers a straightforward lab search feature, allowing users to locate diagnostic facilities in their vicinity quickly. Whether you need a routine blood test or a specialized diagnostic procedure, Labotics has you covered. </li>
+            <li>Price Comparison: Labotics's unique selling point is its ability to compare prices across different labs for the same tests. This feature enables users to find the most cost-effective options without compromising on quality.</li>
+            <li>Location-Based Filters: Users can filter lab results based on their preferred location, ensuring that they can choose a lab that is conveniently situated for them.</li>
+            <li>Test-specific Information: Labotics provides detailed information about each diagnostic test, including its purpose, preparation requirements, and any special considerations. This information empowers users to understand the tests they are undergoing better. </li>
+            <li>User Reviews and Ratings: Labotics incorporates user-generated reviews and ratings for labs, offering a peer-based perspective on the quality of services provided by each facility. </li>
+          </ul>
+        </div>
+        <div class="faqs">
+         <div class="faqs-heading">
+          <h1>Frequently Asked Question's (FAQ'S)</h1>
+         </div>
+            <div class="accordion accordion-flush" id="accordionFlushExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button style="background-color: rgb(33,37,41);" class="accordion-button collapsed " type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                      Q: What is Labotics ?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Labotics is a revolutionary healthcare platform designed to empower individuals seeking diagnostic tests. It is a website that provides a comprehensive solution for locating diagnostic labs, comparing prices for tests, and making informed healthcare decisions. Labotics's user-friendly interface, price comparison feature, location-based filters, test-specific information, user reviews, and online booking options make it a valuable tool for anyone looking to access quality diagnostic services while saving time and money. It promotes transparency, convenience, and affordability in healthcare, helping users make the best choices for their healthcare needs.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                     Q: How does Labotics save users money?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Labotics helps users save money by allowing them to compare prices for diagnostic tests across different labs, ensuring they can choose cost-effective options without compromising on quality.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                      Q: Do all labs on Labotics offer online booking and appointment scheduling?
+                    </button>
+                  </h2>
+                  <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Many labs on Labotics offer the convenience of online booking and appointment scheduling, which can save users time and effort. However, it's essential to check if this feature is available for a specific lab.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefour" aria-expanded="false" aria-controls="flush-collapsefour">
+                    Q: How does Labotics ensure transparency in healthcare?
+                    </button>
+                  </h2>
+                  <div id="flush-collapsefour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Labotics promotes transparency by providing real user-generated reviews and ratings for labs, offering a peer-based perspective on the quality of services provided by each facility.</div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapsefive" aria-expanded="false" aria-controls="flush-collapsefivr">
+                     Q: Why is Labotics considered an empowerment tool for healthcare?
+                    </button>
+                  </h2>
+                  <div id="flush-collapsefive" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                    <div class="accordion-body">Labotics is considered an empowerment tool because it simplifies the process of finding and scheduling diagnostic tests, making healthcare more accessible, user-friendly, and cost-effective. It enables individuals to make informed decisions about their healthcare, ensuring they receive quality care at a price that fits their budget.
+
+
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+        <div class="copy-right">
+          <h1><u>Some Of Our Famous Partner</u></h1>
+         <div class="first-row">
+          <img src="{% static 'images/partner1.gif' %}" alt="">
+          <img src="{% static 'images/partner3.jpg' %}" alt="">
+          <img src="{% static 'images/partner2.jpg' %}" alt="">
+          <img src="{% static 'images/partner7.png' %}" alt="">
+         </div>
+         <div class="first-row" style="margin-top: 80px;">
+          <img src="{% static 'images/partner4.jpeg' %}" alt="">
+          <img src="{% static 'images/partner5.png' %}" alt="">
+          <img src="{% static 'images/partner6.jpg' %}" alt="">
+          <img src="{% static 'images/partner8.jpeg' %}" alt="">
+         </div>
+        </div>
+
+        <div class="footer" style="margin-top: 80px;">
+          <div class="container">
+              <div class="row">
+                  <div class="col-md-4 col-xs-12">
+                      <div class="first">
+                          <h4>Labotics</h4>
+                          <p> Advanced Technology</p>
+                          <p>Comprehensive Test Menu</p>
+                          <p>Rapid Turnaround</p>
+                          <p>Quality Assurance</p>
+                          <p>Healthcare Partnerships:</p>
+                          <p> Convenience and affordability</p>
+                      </div>
+                  </div>
+        
+                  <div class="col-md-4 col-xs-12">
+                      <div class="second">
+                          <h4> Navigate</h4>
+                          <ul>
+                              <li><a href="/">Home</a></li>
+                              <li><a href="{% url "signup" %}">Register</a></li>
+                              <li><a href="{% url "about" %}">About</a></li>
+                              <li><a href="#">Contact Us</a></li>
+                          </ul>
+                      </div>
+                  </div>
+        
+                  <div class="col-md-4 col-xs-12">
+                      <div class="third">
+                          <h4> Contact</h4>
+                          <ul>
+                              <li>Labotics</li> 
+                             
+                            <li><i class="far fa-envelope"></i> Labotics@gmail.com</li>
+                              <li><i class="far fa-envelope"></i> Labotics@yahoo.com</li>
+        
+        
+                            <li><i class="fas fa-map-marker-alt"></i> New Delhi, Bharat(IN) </li>
+                          </ul>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="container">`
+              <div class="row">
+                  <div class="col-12">
+                      <div class="line"></div>
+                      <div class="second2">
+                          <a href="https://codepen.io/AndreeaBunget" target="_blank"> <i class="fa-brands fa-facebook fa-2x margin"></i></a>
+                          <a href="https://www.instagram.com/adarshsingh9540/" target="_blank"> <i class="fa-brands fa-instagram fa-2x margin"></i></a>
+                          <a href="https://www.linkedin.com/in/adarsh-singh-183357262/" target="_blank"> <i class="fab fa-linkedin fa-2x margin"></i></a>
+                          <a href="https://www.youtube.com/channel/UCTefFWBZmEPByurl-Y9JM5A" target="_blank"><i class="fab fa-youtube fa-2x margin" ></i></a>
+        
+                      </div>
+        
+                  </div>
+                  <h5 style="text-align: center; color: #fff;">@Labotics  <i class="fa-solid fa-heart-pulse" style="color: red; margin-left: 10px;"></i></h5>
+              </div>
+              </div>
+        </div>
+
+    </div>
+
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js" integrity="sha384-Rx+T1VzGupg4BHQYs2gCW9It+akI2MM/mndMCy36UVfodzcJcF0GGLxZIzObiEfa" crossorigin="anonymous"></script>
+</body>
+</html>

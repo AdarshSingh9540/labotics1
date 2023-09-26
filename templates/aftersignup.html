@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en" >
+  {% load static %}
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+  <link rel="stylesheet" href="{% static 'style.css' %}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Krub:wght@500&display=swap" rel="stylesheet">
+  <title>Labotics</title>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg  fs-5 bgp sticky-top">
+ 
+    <div class="container-fluid">
+      <a class="navbar-brand fs-5 mx-5 " href="/">Labotics</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-3">
+          <li class="nav-item mx-2">
+            <a class="nav-link active" aria-current="page" href="{% url "aftersignup" %}">Home</a>
+          </li>
+          <li class="nav-item mx-1">
+            <a class="nav-link" href="{% url "about" %}">About</a>
+          </li>
+          <li class="nav-item dropdown mx-1">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Blogs
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Action</a></li>
+              <li><a class="dropdown-item" href="#">Another action</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">Something else here</a></li>
+            </ul>
+          </li>
+          <li class="nav-item mx-2">
+            <a class="nav-link disabled " aria-disabled="true">Register as lab</a>
+          </li>
+        </ul>
+        <div class="login mx-5">
+         
+          <!-- <button type="button" class="btn btn-primary btn-m bg-gradient mx-2 rounded-2 "><a href="login.html" style="text-decoration: none;" >Login</a></button> -->
+          <button type="button" class="btn btn-success btn-m bg-gradient mx-2  rounded-2 logoutbtn"><a href="{% url "index" %}" style="text-decoration: none;">Sign Out</a></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div class="tu d-flex flex-row justify-content-between " style="padding-left: 15vw;
+  padding-right: 15vw;">
+    <div class=" herotext" style="width: 30vw;">
+      <div class="fs-1 ">
+        <p class="herohead" >The <span style="color: #198754;">Easiest</span> way to Find Labs</p>
+      </div>
+
+      <div class="typewriter1 ">
+        <span class="fs-4">where you can</span>
+        <span class="fs-4" id="typewriter" data-array=""> </span>
+        <span class="cursor"></span>
+        
+      </div>
+    </div>
+
+    <img class="heroimage pure-img" src="{% static 'images/download.png' %}" alt="">
+
+  </div>
+
+  <div class="centrekr">
+    <h2 class="mb-4 head"> Features </h2>
+    <div class="after mb-5"></div>
+  </div>
+ <div class="container " >
+  <div class=" d-flex flex-row justify-content-between rounded-5 mb-5" style="box-shadow: 0 0 100px rgba(0, 0, 25, 0.5);
+  padding-left: 100px; padding-right: 100px;">
+    <div class=" herotext left" style="width: 30vw;">
+      <div class="">
+        <h1 class="herohead " style="font-size: 3rem;">Advanced search and filtering</h1>
+      </div>
+
+      <div class=" ">
+        <h1 class="fs-5">Effortlessly find labs that meet your specific needs using our powerful search and
+          filtering options. Search by location, test type, price range, and more.</h1>
+      </div>
+    </div>
+
+    <img class="heroimage right pure-img" src="{% static 'images/download1.png' %}" alt="">
+
+  </div>
+ </div>
+
+ <div class="container " >
+  <div class=" d-flex flex-row justify-content-between rounded-5 mb-5" style="box-shadow: 0 0 100px rgba(0, 0, 25, 0.5);
+  padding-left: 100px; padding-right: 100px;
+   "> 
+    
+
+    <img class="heroimage2 left pure-img" src="{% static 'images/data.png' %}" alt="">
+
+    <div class=" herotext2 right" style="width: 30vw;">
+      <div class="">
+        <h1 class="herohead " style="font-size: 3rem;">Comprehensive Lab Database</h1>
+      </div>
+
+      <div class=" ">
+        <h1 class="fs-5">Explore an extensive database of labs, each with detailed information about their
+          services, locations, and pricing.</h1>
+      </div>
+    </div>
+
+  </div>
+ </div>
+
+ <div class="container " >
+  <div class=" d-flex flex-row justify-content-between rounded-5 mb-5" style="box-shadow: 0 0 100px rgba(0, 0, 25, 0.5);
+  padding-left: 100px; padding-right: 100px; padding-bottom: 80px;">
+    <div class=" herotext left" style="width: 30vw;">
+      <div class="">
+        <h1 class="herohead " style="font-size: 3rem;">User Reviews and Ratings</h1>
+      </div>
+
+      <div class=" ">
+        <h1 class="fs-5">User reviews and ratings to gain insights into the quality and reputation of labs in
+          your area. Share your own experiences to help others make informed choices.</h1>
+      </div>
+    </div>
+
+    <img class="heroimage right" src="{% static 'images/review.png' %}" alt="">
+
+  </div>
+ </div>
+
+  
+
+  
+  
+  
+  <div class="centrekr">
+    <h2 class="my-4 head"> Contact Us </h2>
+    <div class="after">
+    </div>
+    <h4 class="my-3">...Feel free to contact Us...</h4>
+  </div>
+  <footer>
+    <div class="footer-1">
+      <div class="content">
+        <!-- <div class="left box gap">
+                <div class="upper">
+                    <div class="topic">About us</div>
+                    <p>Labotics is not just a website; it's a healthcare empowerment tool. By offering a one-stop solution for locating diagnostic labs, comparing prices, and making informed choices, Labotics is poised to transform the way individuals approach their healthcare needs. In an increasingly complex healthcare landscape, Labotics stands as a beacon of simplicity, transparency, and affordability, making it an invaluable resource for anyone seeking quality diagnostic services.</p>
+                </div>
+            </div> -->
+        <div class="middle box gap">
+          <div class="topic">Location </div>
+
+          <div><i class="fa fa-smile-o" , style="color:#e0b02c"></i>
+            <i class="fa fa-smile-o" , style="color:#e0b02c"></i>
+            <i class="fa fa-smile-o" , style="color:#e0b02c"></i>
+          </div>
+        </div>
+        <div class="right box gap">
+          <div class="topic">Feedback</div>
+          <form action="#" name="feedbackform" onsubmit="return feedbackvalidate()">
+            <input type="text" placeholder="Enter your valuable feedback" name="feedback">
+            <button type="submit" class="btn bg-primary">Send</button>
+          </form>
+        </div>
+      </div>
+      <div class="lower">
+        <div class="social-container">
+          <div class="social-icons">
+            <a class="Twitter gap" href="/" target="_blank" title="Twitter" rel="noopener noreferrer"
+              aria-label="Follow us on Twitter"><i class="fa-brands fa-square-twitter"></i></a>
+            <a class="Instagram gap" href="/" target="_blank" title="Instagram" rel="noopener noreferrer"
+              aria-label="Follow us on Instagram"><i class="fab fa-instagram"></i></a>
+            <a class="linkedin gap" href="/" target="_blank" title="LinkedIn" rel="noopener noreferrer"
+              aria-label="Follow us on LinkedIn"><i class="fa fa-phone-volume"></i></a>
+
+            <a class="Blog gap" href="#" target="_blank" title="Blog" rel="noopener noreferrer"
+              aria-label="Follow us on Blog"><i class="fa fa-rss-square"></i></a>
+          </div>
+        </div>
+        <div class="bottom centrekr" style="color: #fff; font-size:large;">
+          <p>Copyright © <span id="footer-year"></span> <a href="/">@ Labotics
+            </a> All rights reserved</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- <script src="login.js" type="module"></script> -->
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'logic.js' %}"></script>
+  
+  <script src="https://kit.fontawesome.com/02dcb82b73.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
